@@ -11,7 +11,6 @@
 			$message = "Please fill out the required fields.";
 		}
 	}
-  echo $message;
 
   date_default_timezone_set('America/Toronto');
   $thetime = date("H:i:s");
@@ -53,6 +52,7 @@
   <h2 id="welcome">Welcome to the login page! </h2>
     <?php echo "<h2 id=\"greeting\"> {$greeting}</h2>"?>
     <?php echo "<h2 id=\"lasttime\"> The date and time of the last succesful login was {$row['slogin_date']}</h2>"?>
+    <?php echo "<h2 id=\"message\"> {$message}</h2>"?>
     <form action="index.php" method="post">
 		    <label>Username:</label>
 		    <input type="text" name="username" value="" placeholder="User Name Goes Here">
